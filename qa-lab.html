@@ -4,57 +4,28 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>QA Practice Lab — Vishruth S R</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwNDA2MGYiLz4KICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0idXJsKCNnKSIvPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSI2NCIgeTI9IjY0IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM2M2IzZWQiIHN0b3Atb3BhY2l0eT0iMC4xNSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5ZjdhZWEiIHN0b3Atb3BhY2l0eT0iMC4xNSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBCb3JkZXIgLS0+CiAgPHJlY3QgeD0iMS41IiB5PSIxLjUiIHdpZHRoPSI2MSIgaGVpZ2h0PSI2MSIgcng9IjEzIiBmaWxsPSJub25lIiBzdHJva2U9IiM2M2IzZWQiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2Utb3BhY2l0eT0iMC41Ii8+CiAgPCEtLSBWIC0tPgogIDx0ZXh0IHg9IjYiIHk9IjQ2IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCN0KSIgbGV0dGVyLXNwYWNpbmc9Ii0yIj5WU1I8L3RleHQ+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InQiIHgxPSIwIiB5MT0iMCIgeDI9IjY0IiB5Mj0iMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNjNiM2VkIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzlmN2FlYSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBib3R0b20gYWNjZW50IGxpbmUgLS0+CiAgPGxpbmUgeDE9IjgiIHkxPSI1NCIgeDI9IjU2IiB5Mj0iNTQiIHN0cm9rZT0iIzYzYjNlZCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2Utb3BhY2l0eT0iMC40IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#04060f;--surface:#0a0d18;--surface2:#111827;
-  --border:rgba(99,179,237,.13);--accent:#63b3ed;--accent2:#9f7aea;
-  --accent3:#68d391;--text:#e2e8f0;--muted:#5a6a82;--shadow:rgba(0,0,0,.55);
-}
-body.light{
-  --bg:#f0f4ff;--surface:#ffffff;--surface2:#e4ecfb;
-  --border:rgba(37,99,235,.13);--accent:#2563eb;--accent2:#7c3aed;
-  --accent3:#059669;--text:#0f172a;--muted:#64748b;--shadow:rgba(0,0,0,.12);
-}
+:root{--bg:#04060f;--surface:#0a0d18;--surface2:#111827;--border:rgba(99,179,237,.13);--accent:#63b3ed;--accent2:#9f7aea;--accent3:#68d391;--text:#e2e8f0;--muted:#5a6a82}
+body.light{--bg:#f0f4ff;--surface:#fff;--surface2:#e4ecfb;--border:rgba(37,99,235,.13);--accent:#2563eb;--accent2:#7c3aed;--accent3:#059669;--text:#0f172a;--muted:#64748b}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:15px;line-height:1.7;overflow-x:hidden}
-
-/* TOP BAR */
-.lab-topbar{
-  position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;
-  padding:.9rem 3rem;background:rgba(4,6,15,.75);
-  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
-  border-bottom:1px solid var(--border);
-}
-body.light .lab-topbar{background:rgba(240,244,255,.82)}
-.lab-topbar-left{display:flex;align-items:center;gap:1.2rem}
-.lab-back-btn{
-  display:inline-flex;align-items:center;gap:.5rem;
-  font-family:'DM Mono',monospace;font-size:.75rem;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--muted);text-decoration:none;
-  padding:.35rem .8rem;border:1px solid var(--border);border-radius:6px;
-  transition:color .2s,border-color .2s,background .2s;
-}
-.lab-back-btn:hover{color:var(--accent);border-color:var(--accent);background:rgba(99,179,237,.06)}
-.lab-topbar-title{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--accent);letter-spacing:-.01em}
-.lab-topbar-pill{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .6rem;border-radius:12px;background:rgba(104,211,145,.1);border:1px solid rgba(104,211,145,.25);color:var(--accent3);font-family:'DM Mono',monospace}
-.lab-theme-btn{width:56px;height:28px;background:var(--surface2);border:1px solid var(--border);border-radius:20px;position:relative;overflow:hidden;cursor:pointer;transition:background .4s,border-color .3s}
-.lab-theme-btn:hover{border-color:var(--accent)}
-.lab-theme-thumb{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:.7rem;transition:transform .4s cubic-bezier(.34,1.56,.64,1);box-shadow:0 2px 6px rgba(0,0,0,.3)}
-body.light .lab-theme-thumb{transform:translateX(28px)}
-.tg-m{position:absolute;left:7px;top:50%;transform:translateY(-50%);font-size:.7rem;transition:opacity .3s}
-.tg-s{position:absolute;right:7px;top:50%;transform:translateY(-50%);font-size:.7rem;transition:opacity .3s;opacity:0}
-body.light .tg-m{opacity:0}
-body.light .tg-s{opacity:1}
-
-/* HERO */
+.lab-topbar{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:.9rem 3rem;background:rgba(4,6,15,.85);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+body.light .lab-topbar{background:rgba(240,244,255,.9)}
+.lab-back-btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:.35rem .8rem;border:1px solid var(--border);border-radius:6px;transition:color .2s,border-color .2s}
+.lab-back-btn:hover{color:var(--accent);border-color:var(--accent)}
+.lab-topbar-title{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--accent)}
+.lab-topbar-pill{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .6rem;border-radius:12px;background:rgba(104,211,145,.1);border:1px solid rgba(104,211,145,.25);color:var(--accent3)}
+.theme-btn{width:56px;height:28px;background:var(--surface2);border:1px solid var(--border);border-radius:20px;position:relative;cursor:pointer;transition:border-color .3s}
+.theme-btn:hover{border-color:var(--accent)}
+.theme-thumb{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:.7rem;transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
+body.light .theme-thumb{transform:translateX(28px)}
 .lab-hero{padding:3.5rem 3rem 2.5rem;border-bottom:1px solid var(--border);background:linear-gradient(135deg,rgba(99,179,237,.04) 0%,transparent 60%)}
 .lab-hero-tag{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:.6rem;background:rgba(99,179,237,.07);border:1px solid rgba(99,179,237,.18);padding:.3rem .8rem;border-radius:20px;margin-bottom:1.2rem}
-.lab-hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent3);display:block;animation:hpulse 2s infinite}
-@keyframes hpulse{0%,100%{opacity:1}50%{opacity:.3}}
+.lab-hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent3);display:block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 .lab-hero h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:.8rem}
 .lab-hero h1 span{color:var(--accent)}
 .lab-hero-sub{color:var(--muted);font-size:.87rem;max-width:680px;line-height:1.85;margin-bottom:1.5rem}
@@ -68,915 +39,455 @@ body.light .tg-s{opacity:1}
 h2{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
 .lab-intro{color:var(--muted);font-size:.87rem;line-height:1.9;max-width:620px;margin-bottom:3.5rem}
 .lab-intro code{background:var(--surface2);color:var(--accent);padding:.1rem .4rem;border-radius:3px;font-size:.82rem}
-
-/* Reveal for scroll animations */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
-.reveal.visible{opacity:1;transform:none}
-
-/* ══════════════════════════════════
-   QA PRACTICE LAB
-══════════════════════════════════ */
-#qa-lab{padding:8rem 4rem;border-top:1px solid var(--border)}
-.lab-intro{color:var(--muted);font-size:.87rem;line-height:1.9;max-width:620px;margin-bottom:3.5rem}
-.lab-intro code{background:var(--surface2);color:var(--accent);padding:.1rem .4rem;border-radius:3px;font-size:.82rem}
-
-/* category grid */
 .lab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.5rem}
-
-/* card */
-.lab-card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:12px;padding:1.6rem;
-  transition:border-color .3s,box-shadow .3s;
-}
-.lab-card:hover{border-color:rgba(99,179,237,.3);box-shadow:0 8px 32px var(--shadow)}
-.lab-card-title{
-  font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;
-  color:var(--text);margin-bottom:.3rem;
-  display:flex;align-items:center;gap:.6rem;
-}
-.lab-card-title .lab-icon{font-size:1.1rem}
-.lab-badge{
-  font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;
-  padding:.15rem .5rem;border-radius:10px;font-family:'DM Mono',monospace;
-}
+.lab-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.6rem;transition:border-color .3s,box-shadow .3s}
+.lab-card:hover{border-color:rgba(99,179,237,.3);box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.lab-card-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:var(--text);margin-bottom:.3rem;display:flex;align-items:center;gap:.6rem}
+.lab-badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:.15rem .5rem;border-radius:10px}
 .lab-badge.easy{background:rgba(104,211,145,.12);color:var(--accent3);border:1px solid rgba(104,211,145,.25)}
 .lab-badge.medium{background:rgba(251,191,36,.1);color:#fbbf24;border:1px solid rgba(251,191,36,.25)}
 .lab-badge.hard{background:rgba(248,113,113,.1);color:#f87171;border:1px solid rgba(248,113,113,.25)}
 .lab-desc{font-size:.78rem;color:var(--muted);margin:.5rem 0 1rem;line-height:1.7}
-
-/* lab elements */
 .lab-elements{display:flex;flex-direction:column;gap:.7rem}
 .lab-row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
-
-/* shared lab input style */
-.lab-input{
-  background:var(--surface2);border:1px solid var(--border);border-radius:6px;
-  padding:.45rem .75rem;color:var(--text);font-family:'DM Mono',monospace;
-  font-size:.8rem;outline:none;transition:border-color .25s;
-  min-width:0;flex:1;
-}
-.lab-input:focus{border-color:var(--accent)}
-.lab-select{
-  background:var(--surface2);border:1px solid var(--border);border-radius:6px;
-  padding:.45rem .75rem;color:var(--text);font-family:'DM Mono',monospace;
-  font-size:.8rem;outline:none;cursor:none;
-}
-.lab-select:focus{border-color:var(--accent)}
-.lab-textarea{
-  background:var(--surface2);border:1px solid var(--border);border-radius:6px;
-  padding:.45rem .75rem;color:var(--text);font-family:'DM Mono',monospace;
-  font-size:.8rem;outline:none;resize:vertical;min-height:60px;width:100%;
-}
-
-/* lab buttons */
-.lab-btn{
-  padding:.42rem 1rem;border-radius:6px;font-family:'DM Mono',monospace;
-  font-size:.75rem;letter-spacing:.05em;border:none;cursor:none;
-  transition:opacity .2s,transform .2s,box-shadow .2s;white-space:nowrap;
-}
+.lab-input,.lab-select{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:.45rem .75rem;color:var(--text);font-family:'DM Mono',monospace;font-size:.8rem;outline:none;transition:border-color .25s}
+.lab-input:focus,.lab-select:focus{border-color:var(--accent)}
+.lab-input{flex:1;min-width:0}
+.lab-textarea{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:.45rem .75rem;color:var(--text);font-family:'DM Mono',monospace;font-size:.8rem;outline:none;resize:vertical;min-height:60px;width:100%}
+.lab-btn{padding:.42rem 1rem;border-radius:6px;font-family:'DM Mono',monospace;font-size:.75rem;letter-spacing:.05em;border:none;cursor:pointer;transition:opacity .2s,transform .2s;white-space:nowrap}
 .lab-btn:hover{opacity:.85;transform:translateY(-1px)}
 .lab-btn.primary{background:var(--accent);color:var(--bg)}
 .lab-btn.secondary{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
 .lab-btn.danger{background:#ef4444;color:#fff}
 .lab-btn.success{background:#22c55e;color:#fff}
 .lab-btn.warning{background:#f59e0b;color:#000}
-.lab-btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
-
-/* result / output box */
-.lab-result{
-  margin-top:.7rem;padding:.55rem .85rem;border-radius:6px;
-  font-size:.78rem;font-family:'DM Mono',monospace;
-  background:var(--surface2);border:1px solid var(--border);
-  color:var(--accent3);min-height:2rem;word-break:break-all;
-  transition:background .3s;
-}
-.lab-result.error{color:#f87171;background:rgba(248,113,113,.07)}
+.lab-result{margin-top:.7rem;padding:.55rem .85rem;border-radius:6px;font-size:.78rem;font-family:'DM Mono',monospace;background:var(--surface2);border:1px solid var(--border);color:var(--accent3);min-height:2rem;word-break:break-all}
+.lab-result.error{color:#f87171}
 .lab-result.warn{color:#fbbf24}
-
-/* checkboxes / radios */
 .lab-check-row{display:flex;flex-wrap:wrap;gap:.8rem}
-.lab-check-item{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--muted);cursor:none}
-.lab-check-item input{width:15px;height:15px;cursor:none;accent-color:var(--accent)}
-
-/* range */
+.lab-check-item{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--muted);cursor:pointer}
+.lab-check-item input{width:15px;height:15px;accent-color:var(--accent)}
 .lab-range{width:100%;accent-color:var(--accent)}
 .lab-range-val{font-size:.78rem;color:var(--accent);font-family:'DM Mono',monospace;min-width:2.5rem;text-align:right}
-
-/* progress */
 .lab-progress-wrap{background:var(--surface2);border-radius:20px;height:10px;overflow:hidden;width:100%}
 .lab-progress-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:20px;transition:width .4s ease;width:0%}
-
-/* table */
 .lab-table{width:100%;border-collapse:collapse;font-size:.78rem}
 .lab-table th{background:var(--surface2);color:var(--accent);font-weight:500;padding:.5rem .7rem;text-align:left;letter-spacing:.06em;font-size:.7rem;text-transform:uppercase}
 .lab-table td{padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--muted)}
 .lab-table tr:hover td{background:rgba(99,179,237,.04);color:var(--text)}
 .lab-table tr:last-child td{border-bottom:none}
-
-/* iframe box */
 .lab-iframe-wrap{position:relative;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff}
 .lab-iframe{width:100%;height:160px;border:none;display:block}
-.lab-iframe-label{position:absolute;top:6px;right:8px;font-size:.65rem;background:rgba(99,179,237,.9);color:#000;padding:.1rem .5rem;border-radius:4px;font-family:'DM Mono',monospace;letter-spacing:.05em}
-
-/* drag-drop */
-.lab-drag-item{
-  padding:.5rem 1rem;background:var(--surface2);border:1px solid var(--border);
-  border-radius:6px;font-size:.78rem;color:var(--text);cursor:grab;
-  transition:background .2s,border-color .2s,transform .15s;
-  user-select:none;
-}
+.lab-iframe-label{position:absolute;top:6px;right:8px;font-size:.65rem;background:rgba(99,179,237,.9);color:#000;padding:.1rem .5rem;border-radius:4px;font-family:'DM Mono',monospace}
+.lab-drag-item{padding:.5rem 1rem;background:var(--surface2);border:1px solid var(--border);border-radius:6px;font-size:.78rem;color:var(--text);cursor:grab;transition:border-color .2s,transform .15s;user-select:none}
 .lab-drag-item:hover{border-color:var(--accent);transform:scale(1.02)}
-.lab-drag-item:active{cursor:grabbing}
-.lab-dropzone{
-  min-height:60px;border:2px dashed var(--border);border-radius:8px;
-  display:flex;flex-wrap:wrap;gap:.5rem;padding:.6rem;
-  align-items:flex-start;align-content:flex-start;
-  transition:border-color .25s,background .25s;
-  font-size:.75rem;color:var(--muted);
-}
+.lab-dropzone{min-height:60px;border:2px dashed var(--border);border-radius:8px;display:flex;flex-wrap:wrap;gap:.5rem;padding:.6rem;align-items:flex-start;align-content:flex-start;transition:border-color .25s,background .25s;font-size:.75rem;color:var(--muted)}
 .lab-dropzone.drag-over{border-color:var(--accent);background:rgba(99,179,237,.05)}
 .lab-dropzone:empty::before{content:'Drop items here';display:block;width:100%;text-align:center;padding:.5rem;font-size:.75rem;color:var(--muted)}
-
-/* tooltip */
 .lab-tooltip-wrap{position:relative;display:inline-block}
-.lab-tooltip-box{
-  visibility:hidden;opacity:0;
-  position:absolute;bottom:130%;left:50%;transform:translateX(-50%);
-  background:var(--text);color:var(--bg);padding:.35rem .75rem;
-  border-radius:5px;font-size:.72rem;white-space:nowrap;pointer-events:none;
-  transition:opacity .2s;z-index:100;
-}
+.lab-tooltip-box{visibility:hidden;opacity:0;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:.35rem .75rem;border-radius:5px;font-size:.72rem;white-space:nowrap;pointer-events:none;transition:opacity .2s;z-index:100}
 .lab-tooltip-box::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--text)}
 .lab-tooltip-wrap:hover .lab-tooltip-box{visibility:visible;opacity:1}
-
-/* shadow popup (in-page modal) */
-.lab-modal-overlay{
-  display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);
-  z-index:8000;align-items:center;justify-content:center;
-}
+.lab-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:8000;align-items:center;justify-content:center}
 .lab-modal-overlay.open{display:flex}
-.lab-modal-box{
-  background:var(--surface);border:1px solid var(--border);border-radius:12px;
-  padding:2rem;max-width:420px;width:90%;position:relative;
-  animation:labModalIn .25s ease;
-}
-@keyframes labModalIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
-.lab-modal-close{position:absolute;top:.8rem;right:.8rem;background:none;border:none;color:var(--muted);font-size:1.1rem;cursor:none;transition:color .2s}
-.lab-modal-close:hover{color:var(--text)}
+.lab-modal-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:2rem;max-width:420px;width:90%;position:relative;animation:modalIn .25s ease}
+@keyframes modalIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.lab-modal-close{position:absolute;top:.8rem;right:.8rem;background:none;border:none;color:var(--muted);font-size:1.1rem;cursor:pointer}
 .lab-modal-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.6rem}
 .lab-modal-body{font-size:.85rem;color:var(--muted);line-height:1.7}
 .lab-modal-footer{display:flex;gap:.7rem;margin-top:1.2rem;justify-content:flex-end}
-
-/* dynamic content */
-.lab-dynamic-area{
-  min-height:50px;border:1px dashed var(--border);border-radius:8px;
-  padding:.6rem;display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;
-  font-size:.78rem;color:var(--muted);transition:border-color .25s;
-}
-.lab-dynamic-tag{
-  padding:.2rem .6rem;background:rgba(99,179,237,.1);border:1px solid rgba(99,179,237,.2);
-  border-radius:12px;font-size:.73rem;color:var(--accent);
-  animation:labTagIn .3s ease;
-}
-@keyframes labTagIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
-
-/* loading spinner */
-.lab-spinner{
-  width:28px;height:28px;border:3px solid var(--border);
-  border-top-color:var(--accent);border-radius:50%;
-  animation:spin .7s linear infinite;display:inline-block;
-  vertical-align:middle;
-}
+.lab-dynamic-area{min-height:50px;border:1px dashed var(--border);border-radius:8px;padding:.6rem;display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;font-size:.78rem;color:var(--muted)}
+.lab-dynamic-tag{padding:.2rem .6rem;background:rgba(99,179,237,.1);border:1px solid rgba(99,179,237,.2);border-radius:12px;font-size:.73rem;color:var(--accent);animation:tagIn .3s ease}
+@keyframes tagIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
+.lab-spinner{width:28px;height:28px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite;display:inline-block;vertical-align:middle}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/* file upload */
-.lab-file-zone{
-  border:2px dashed var(--border);border-radius:8px;padding:1rem;
-  text-align:center;cursor:none;transition:border-color .25s,background .25s;
-  font-size:.78rem;color:var(--muted);
-}
+.lab-file-zone{border:2px dashed var(--border);border-radius:8px;padding:1rem;text-align:center;cursor:pointer;transition:border-color .25s,background .25s;font-size:.78rem;color:var(--muted)}
 .lab-file-zone:hover,.lab-file-zone.drag-over{border-color:var(--accent);background:rgba(99,179,237,.04)}
 .lab-file-input{display:none}
-
-/* hover card */
-.lab-hover-card{
-  padding:1rem;background:var(--surface2);border:1px solid var(--border);
-  border-radius:8px;transition:all .3s cubic-bezier(.34,1.56,.64,1);font-size:.82rem;color:var(--muted);
-}
-.lab-hover-card:hover{
-  background:rgba(99,179,237,.08);border-color:var(--accent);
-  color:var(--text);transform:scale(1.04) translateY(-3px);
-  box-shadow:0 12px 30px rgba(99,179,237,.15);cursor:none;
-}
-
-/* counter */
+.lab-hover-card{padding:1rem;background:var(--surface2);border:1px solid var(--border);border-radius:8px;transition:all .3s cubic-bezier(.34,1.56,.64,1);font-size:.82rem;color:var(--muted);cursor:default}
+.lab-hover-card:hover{background:rgba(99,179,237,.08);border-color:var(--accent);color:var(--text);transform:scale(1.04) translateY(-3px);box-shadow:0 12px 30px rgba(99,179,237,.15)}
 .lab-counter-num{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;color:var(--accent);min-width:3rem;text-align:center}
-
-/* notification stack */
 .lab-notif-stack{position:fixed;top:5rem;right:1.5rem;z-index:7000;display:flex;flex-direction:column;gap:.5rem;pointer-events:none}
-.lab-notif{
-  background:var(--surface);border:1px solid var(--border);border-radius:8px;
-  padding:.7rem 1rem;font-size:.8rem;color:var(--text);
-  box-shadow:0 8px 24px var(--shadow);pointer-events:all;
-  animation:notifIn .35s cubic-bezier(.34,1.56,.64,1);max-width:260px;
-  display:flex;align-items:center;gap:.6rem;
-}
+.lab-notif{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:.7rem 1rem;font-size:.8rem;color:var(--text);box-shadow:0 8px 24px rgba(0,0,0,.4);pointer-events:all;animation:notifIn .35s cubic-bezier(.34,1.56,.64,1);max-width:260px;display:flex;align-items:center;gap:.6rem}
 .lab-notif.removing{animation:notifOut .3s ease forwards}
 @keyframes notifIn{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:translateX(0)}}
 @keyframes notifOut{to{opacity:0;transform:translateX(60px)}}
-.lab-notif-icon{font-size:1rem;flex-shrink:0}
-
-#qa-lab{padding:0 !important;border-top:none !important}
-
-@media(max-width:767px){
-  .lab-topbar{padding:.8rem 1rem}
-  .lab-hero{padding:2rem 1.2rem 1.5rem}
-  .lab-content{padding:1.5rem 1.2rem}
-  .lab-grid{grid-template-columns:1fr}
-}
+footer{padding:1.5rem 3rem;border-top:1px solid var(--border);font-size:.72rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+@media(max-width:767px){.lab-topbar{padding:.8rem 1rem}.lab-hero{padding:2rem 1.2rem 1.5rem}.lab-content{padding:1.5rem 1.2rem}.lab-grid{grid-template-columns:1fr}footer{padding:1.5rem 1rem}}
 </style>
 </head>
 <body>
-
 <nav class="lab-topbar">
-  <div class="lab-topbar-left">
+  <div style="display:flex;align-items:center;gap:1.2rem">
     <a href="/" class="lab-back-btn">← Portfolio</a>
     <span class="lab-topbar-title">QA Practice Lab</span>
     <span class="lab-topbar-pill">● Live</span>
   </div>
-  <button class="lab-theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
-    <div class="lab-theme-thumb"><span id="te">🌙</span></div>
-    <span class="tg-m">🌙</span><span class="tg-s">☀️</span>
+  <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+    <div class="theme-thumb"><span id="te">🌙</span></div>
   </button>
 </nav>
-
 <div class="lab-hero">
   <div class="lab-hero-tag">Interactive Automation Playground</div>
   <h1>QA <span>Practice Lab</span></h1>
-  <p class="lab-hero-sub">
-    A live playground to practice automation scripts with <code>Selenium</code>, <code>Playwright</code>, and <code>Cypress</code>.
-    Every element has a unique <code>id</code> and <code>data-testid</code> ready to target.
-  </p>
+  <p class="lab-hero-sub">Practice automation scripts with <code>Selenium</code>, <code>Playwright</code>, and <code>Cypress</code>. Every element has a unique <code>id</code> and <code>data-testid</code> attribute.</p>
   <div class="lab-stats">
     <div><span class="lab-stat-num">15</span><span class="lab-stat-label">Categories</span></div>
     <div><span class="lab-stat-num">60+</span><span class="lab-stat-label">Test Elements</span></div>
     <div><span class="lab-stat-num">3</span><span class="lab-stat-label">Difficulty Levels</span></div>
-    <div><span class="lab-stat-num">100%</span><span class="lab-stat-label">Real DOM</span></div>
+  </div>
+</div>
+<div class="lab-content">
+<div class="section-label">Practice Elements</div>
+<h2>All Test Scenarios</h2>
+<p class="lab-intro">Every element below has a unique <code>id</code> and <code>data-testid</code>. Open DevTools → inspect any element to find its selector. Use <code>driver.find_element(By.ID, "...")</code> or <code>page.locator('[data-testid="..."]')</code>.</p>
+<div class="lab-grid">
+
+<!-- 1. Alerts -->
+<div class="lab-card">
+  <div class="lab-card-title">🔔 Popups &amp; Alerts <span class="lab-badge easy">Easy</span></div>
+  <p class="lab-desc">Browser alert, confirm, prompt dialogs and in-page modal.</p>
+  <div class="lab-elements">
+    <div class="lab-row">
+      <button id="btn-alert" data-testid="btn-alert" class="lab-btn primary" onclick="triggerAlert()">Alert</button>
+      <button id="btn-confirm" data-testid="btn-confirm" class="lab-btn warning" onclick="triggerConfirm()">Confirm</button>
+      <button id="btn-prompt" data-testid="btn-prompt" class="lab-btn secondary" onclick="triggerPrompt()">Prompt</button>
+      <button id="btn-modal" data-testid="btn-modal" class="lab-btn success" onclick="openLabModal()">Modal</button>
+    </div>
+    <div id="popup-result" data-testid="popup-result" class="lab-result">Result appears here…</div>
   </div>
 </div>
 
-<div class="lab-content">
-<!-- QA PRACTICE LAB -->
-<section id="qa-lab">
-  <div class="reveal">
-    <div class="section-label">Interactive</div>
-    <h2>QA Practice Lab</h2>
-    <p class="lab-intro">
-      A live playground for practising automation scripts. All elements have
-      unique <code>id</code> and <code>data-testid</code> attributes for easy targeting
-      with Selenium, Playwright, or Cypress.
-    </p>
+<!-- 2. Windows -->
+<div class="lab-card">
+  <div class="lab-card-title">🪟 Windows &amp; Tabs <span class="lab-badge easy">Easy</span></div>
+  <p class="lab-desc">Open popups and new tabs. Practice window-switching.</p>
+  <div class="lab-elements">
+    <div class="lab-row">
+      <button id="btn-new-tab" data-testid="btn-new-tab" class="lab-btn primary" onclick="window.open('https://example.com','_blank')">New Tab</button>
+      <button id="btn-popup-win" data-testid="btn-popup-win" class="lab-btn secondary" onclick="openPopupWin()">Popup Window</button>
+      <button id="btn-child-win" data-testid="btn-child-win" class="lab-btn warning" onclick="openChildWin()">Child Window</button>
+    </div>
+    <div id="win-result" data-testid="win-result" class="lab-result">Click a button to open a window…</div>
   </div>
+</div>
 
-  <div class="lab-grid">
+<!-- 3. iFrames -->
+<div class="lab-card">
+  <div class="lab-card-title">🖼️ iFrames <span class="lab-badge medium">Medium</span></div>
+  <p class="lab-desc">Switch into frames using <code>driver.switch_to.frame()</code>.</p>
+  <div class="lab-elements">
+    <div class="lab-iframe-wrap">
+      <iframe id="iframe-1" data-testid="iframe-1" class="lab-iframe" srcdoc='<html><body style="margin:0;padding:12px;font-family:monospace;font-size:13px;background:#0d1117;color:#63b3ed"><p><strong>Frame 1</strong></p><input id="iframe-input-1" data-testid="iframe-input" placeholder="Type inside Frame 1" style="background:#111;border:1px solid #333;color:#e2e8f0;padding:6px;border-radius:4px;width:80%;font-family:monospace"><br><br><button id="iframe-btn-1" onclick="document.getElementById(\"out\").textContent=&quot;Clicked at &quot;+new Date().toLocaleTimeString()" style="background:#63b3ed;color:#000;border:none;padding:6px 14px;border-radius:4px;cursor:pointer;font-family:monospace">Click Me</button><p id="out" style="color:#68d391"></p></body></html>'></iframe>
+      <span class="lab-iframe-label">iframe #1</span>
+    </div>
+    <div class="lab-iframe-wrap" style="margin-top:.6rem">
+      <iframe id="iframe-2" data-testid="iframe-2" class="lab-iframe" srcdoc='<html><body style="margin:0;padding:12px;font-family:monospace;font-size:13px;background:#0d1117;color:#9f7aea"><p><strong>Frame 2</strong></p><select id="iframe-select" data-testid="iframe-select" style="background:#111;border:1px solid #333;color:#e2e8f0;padding:6px;border-radius:4px;font-family:monospace"><option>Option A</option><option>Option B</option><option>Option C</option></select><br><br><button onclick="document.getElementById(&quot;o2&quot;).textContent=&quot;Selected: &quot;+document.getElementById(&quot;iframe-select&quot;).value" style="background:#9f7aea;color:#fff;border:none;padding:6px 14px;border-radius:4px;cursor:pointer;margin-top:6px;font-family:monospace">Get Value</button><p id="o2" style="color:#68d391;font-size:12px"></p></body></html>'></iframe>
+      <span class="lab-iframe-label">iframe #2</span>
+    </div>
+  </div>
+</div>
 
-    <!-- ── 1. POPUPS & ALERTS ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">🔔</span>Popups &amp; Alerts<span class="lab-badge easy">Easy</span></div>
-      <p class="lab-desc">Browser-native alert, confirm, and prompt dialogs + in-page modal.</p>
-      <div class="lab-elements">
-        <div class="lab-row">
-          <button id="btn-alert"   data-testid="btn-alert"   class="lab-btn primary" onclick="triggerAlert()">Alert</button>
-          <button id="btn-confirm" data-testid="btn-confirm" class="lab-btn warning" onclick="triggerConfirm()">Confirm</button>
-          <button id="btn-prompt"  data-testid="btn-prompt"  class="lab-btn secondary" onclick="triggerPrompt()">Prompt</button>
-          <button id="btn-modal"   data-testid="btn-modal"   class="lab-btn success" onclick="openLabModal('default')">Modal</button>
-        </div>
-        <div id="popup-result" data-testid="popup-result" class="lab-result">Result appears here…</div>
+<!-- 4. Forms -->
+<div class="lab-card">
+  <div class="lab-card-title">📝 Form Elements <span class="lab-badge easy">Easy</span></div>
+  <p class="lab-desc">Text, email, password, number, date, textarea inputs.</p>
+  <div class="lab-elements">
+    <form id="lab-form" data-testid="lab-form" onsubmit="submitLabForm(event)">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.6rem">
+        <input id="lab-name" data-testid="lab-name" class="lab-input" type="text" placeholder="Full Name"/>
+        <input id="lab-email" data-testid="lab-email" class="lab-input" type="email" placeholder="Email"/>
+        <input id="lab-password" data-testid="lab-password" class="lab-input" type="password" placeholder="Password"/>
+        <input id="lab-number" data-testid="lab-number" class="lab-input" type="number" placeholder="Age" min="1" max="99"/>
+        <input id="lab-date" data-testid="lab-date" class="lab-input" type="date" style="grid-column:span 2"/>
+      </div>
+      <textarea id="lab-textarea" data-testid="lab-textarea" class="lab-textarea" placeholder="Your message…"></textarea>
+      <div style="margin-top:.6rem;display:flex;gap:.6rem">
+        <button type="submit" id="lab-form-submit" data-testid="lab-form-submit" class="lab-btn primary">Submit</button>
+        <button type="reset" id="lab-form-reset" data-testid="lab-form-reset" class="lab-btn secondary">Reset</button>
+      </div>
+    </form>
+    <div id="form-result" data-testid="form-result" class="lab-result" style="display:none"></div>
+  </div>
+</div>
+
+<!-- 5. Dropdowns -->
+<div class="lab-card">
+  <div class="lab-card-title">📋 Dropdowns &amp; Selects <span class="lab-badge easy">Easy</span></div>
+  <p class="lab-desc">Single, multi-select, and dynamic option loading.</p>
+  <div class="lab-elements">
+    <div class="lab-row">
+      <select id="lab-single-select" data-testid="lab-single-select" class="lab-select" onchange="setResult('select-result','Selected: '+this.options[this.selectedIndex].text)">
+        <option value="">-- Choose Role --</option>
+        <option value="qa">QA Engineer</option>
+        <option value="dev">Developer</option>
+        <option value="devops">DevOps</option>
+        <option value="pm">Product Manager</option>
+      </select>
+      <select id="lab-multi-select" data-testid="lab-multi-select" class="lab-select" multiple size="3" onchange="multiSel()">
+        <option value="selenium">Selenium</option>
+        <option value="playwright">Playwright</option>
+        <option value="cypress">Cypress</option>
+        <option value="appium">Appium</option>
+      </select>
+    </div>
+    <div class="lab-row" style="margin-top:.4rem">
+      <button id="btn-load-options" data-testid="btn-load-options" class="lab-btn secondary" onclick="loadDynamicOptions()">Load Dynamic Options</button>
+      <select id="lab-dynamic-select" data-testid="lab-dynamic-select" class="lab-select"><option>— Load first —</option></select>
+    </div>
+    <div id="select-result" data-testid="select-result" class="lab-result">Select something…</div>
+  </div>
+</div>
+
+<!-- 6. Checkboxes -->
+<div class="lab-card">
+  <div class="lab-card-title">☑️ Checkboxes &amp; Radios <span class="lab-badge easy">Easy</span></div>
+  <p class="lab-desc">Group, select-all, and radio button interactions.</p>
+  <div class="lab-elements">
+    <div class="lab-check-row">
+      <label class="lab-check-item"><input type="checkbox" id="chk-selenium" data-testid="chk-selenium" value="Selenium" onchange="updateCheckResult()"> Selenium</label>
+      <label class="lab-check-item"><input type="checkbox" id="chk-pytest" data-testid="chk-pytest" value="PyTest" onchange="updateCheckResult()"> PyTest</label>
+      <label class="lab-check-item"><input type="checkbox" id="chk-postman" data-testid="chk-postman" value="Postman" onchange="updateCheckResult()"> Postman</label>
+      <label class="lab-check-item"><input type="checkbox" id="chk-jira" data-testid="chk-jira" value="JIRA" onchange="updateCheckResult()"> JIRA</label>
+    </div>
+    <div class="lab-row" style="margin-top:.4rem">
+      <button id="btn-check-all" data-testid="btn-check-all" class="lab-btn secondary" onclick="checkAll(true)">Check All</button>
+      <button id="btn-uncheck-all" data-testid="btn-uncheck-all" class="lab-btn secondary" onclick="checkAll(false)">Uncheck All</button>
+    </div>
+    <p style="font-size:.78rem;color:var(--muted);margin:.5rem 0 .3rem">Experience level:</p>
+    <div class="lab-check-row">
+      <label class="lab-check-item"><input type="radio" id="rad-junior" data-testid="rad-junior" name="exp" value="Junior" onchange="updateCheckResult()"> Junior</label>
+      <label class="lab-check-item"><input type="radio" id="rad-mid" data-testid="rad-mid" name="exp" value="Mid" onchange="updateCheckResult()"> Mid</label>
+      <label class="lab-check-item"><input type="radio" id="rad-senior" data-testid="rad-senior" name="exp" value="Senior" onchange="updateCheckResult()"> Senior</label>
+    </div>
+    <div id="check-result" data-testid="check-result" class="lab-result">Check some options…</div>
+  </div>
+</div>
+
+<!-- 7. Dynamic Elements -->
+<div class="lab-card">
+  <div class="lab-card-title">⚡ Dynamic Elements <span class="lab-badge medium">Medium</span></div>
+  <p class="lab-desc">Elements that appear/disappear or change state.</p>
+  <div class="lab-elements">
+    <div class="lab-row">
+      <button id="btn-show-delayed" data-testid="btn-show-delayed" class="lab-btn primary" onclick="showDelayed()">Show After 2s</button>
+      <button id="btn-toggle-elem" data-testid="btn-toggle-elem" class="lab-btn secondary" onclick="toggleElem()">Toggle Element</button>
+      <button id="btn-add-tag" data-testid="btn-add-tag" class="lab-btn warning" onclick="addTag()">Add Tag</button>
+      <button id="btn-clear-tags" data-testid="btn-clear-tags" class="lab-btn danger" onclick="clearTags()">Clear</button>
+    </div>
+    <div id="dynamic-area" data-testid="dynamic-area" class="lab-dynamic-area">Dynamic content area…</div>
+    <div id="delayed-element" data-testid="delayed-element" style="display:none;margin-top:.5rem;padding:.5rem .8rem;background:rgba(104,211,145,.1);border:1px solid rgba(104,211,145,.3);border-radius:6px;font-size:.78rem;color:var(--accent3)">✓ I appeared after a 2-second delay!</div>
+  </div>
+</div>
+
+<!-- 8. Waits -->
+<div class="lab-card">
+  <div class="lab-card-title">⏳ Waits &amp; Loading <span class="lab-badge medium">Medium</span></div>
+  <p class="lab-desc">Simulate async loading, spinners, and progress bars.</p>
+  <div class="lab-elements">
+    <div class="lab-row">
+      <button id="btn-start-progress" data-testid="btn-start-progress" class="lab-btn primary" onclick="startProgress()">Start Progress</button>
+      <button id="btn-fake-ajax" data-testid="btn-fake-ajax" class="lab-btn secondary" onclick="fakeAjax()">Fake AJAX Call</button>
+      <button id="btn-reset-progress" data-testid="btn-reset-progress" class="lab-btn danger" onclick="resetProgress()">Reset</button>
+    </div>
+    <div class="lab-progress-wrap" style="margin:.5rem 0">
+      <div id="lab-progress-bar" data-testid="lab-progress-bar" class="lab-progress-bar"></div>
+    </div>
+    <div id="progress-pct" data-testid="progress-pct" style="font-size:.75rem;color:var(--muted);text-align:right">0%</div>
+    <div id="loading-area" data-testid="loading-area" class="lab-result" style="display:flex;align-items:center;gap:.7rem">
+      <span id="ajax-status" data-testid="ajax-status">Click "Fake AJAX Call"…</span>
+    </div>
+  </div>
+</div>
+
+<!-- 9. Drag Drop -->
+<div class="lab-card">
+  <div class="lab-card-title">🖱️ Drag &amp; Drop <span class="lab-badge medium">Medium</span></div>
+  <p class="lab-desc">Drag items between zones. Use <code>ActionChains</code>.</p>
+  <div class="lab-elements">
+    <p style="font-size:.75rem;color:var(--muted)">Source:</p>
+    <div id="drag-source" data-testid="drag-source" class="lab-row" style="gap:.5rem;flex-wrap:wrap">
+      <div id="drag-1" data-testid="drag-1" class="lab-drag-item" draggable="true" ondragstart="dragStart(event)">🔴 Item 1</div>
+      <div id="drag-2" data-testid="drag-2" class="lab-drag-item" draggable="true" ondragstart="dragStart(event)">🟡 Item 2</div>
+      <div id="drag-3" data-testid="drag-3" class="lab-drag-item" draggable="true" ondragstart="dragStart(event)">🟢 Item 3</div>
+    </div>
+    <p style="font-size:.75rem;color:var(--muted);margin-top:.5rem">Drop zone:</p>
+    <div id="drop-zone" data-testid="drop-zone" class="lab-dropzone" ondragover="event.preventDefault();this.classList.add('drag-over')" ondragleave="this.classList.remove('drag-over')" ondrop="dropItem(event)"></div>
+    <button id="btn-reset-drag" data-testid="btn-reset-drag" class="lab-btn secondary" style="margin-top:.5rem" onclick="resetDrag()">Reset</button>
+  </div>
+</div>
+
+<!-- 10. Tooltips -->
+<div class="lab-card">
+  <div class="lab-card-title">💬 Tooltips &amp; Hover <span class="lab-badge easy">Easy</span></div>
+  <p class="lab-desc">Use <code>ActionChains.move_to_element()</code> to trigger.</p>
+  <div class="lab-elements">
+    <div class="lab-row" style="flex-wrap:wrap;gap:.8rem">
+      <div class="lab-tooltip-wrap">
+        <button id="tooltip-btn-1" data-testid="tooltip-btn-1" class="lab-btn primary">Hover me ①</button>
+        <span class="lab-tooltip-box">Tooltip: QA Engineer</span>
+      </div>
+      <div class="lab-tooltip-wrap">
+        <button id="tooltip-btn-2" data-testid="tooltip-btn-2" class="lab-btn secondary">Hover me ②</button>
+        <span class="lab-tooltip-box">Tooltip: Selenium Expert</span>
+      </div>
+      <div class="lab-tooltip-wrap">
+        <span id="tooltip-icon" data-testid="tooltip-icon" style="cursor:default;font-size:1.2rem">ℹ️</span>
+        <span class="lab-tooltip-box">Icon tooltip!</span>
       </div>
     </div>
+    <div id="hover-card-1" data-testid="hover-card-1" class="lab-hover-card" style="margin-top:.7rem" onmouseenter="setResult('hov-result','✓ Hovered at '+new Date().toLocaleTimeString())" onmouseleave="setResult('hov-result','Mouse left')">Hover over this card — it transforms!</div>
+    <div id="hov-result" data-testid="hov-result" class="lab-result">Hover a card or button…</div>
+  </div>
+</div>
 
-    <!-- ── 2. NEW / CHILD WINDOW ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">🪟</span>Windows &amp; Tabs<span class="lab-badge easy">Easy</span></div>
-      <p class="lab-desc">Open popups and new tabs. Practice window-switching in WebDriver.</p>
-      <div class="lab-elements">
-        <div class="lab-row">
-          <button id="btn-new-tab"    data-testid="btn-new-tab"    class="lab-btn primary" onclick="window.open('https://example.com','_blank')">New Tab</button>
-          <button id="btn-popup-win"  data-testid="btn-popup-win"  class="lab-btn secondary" onclick="openPopupWin()">Popup Window</button>
-          <button id="btn-child-win"  data-testid="btn-child-win"  class="lab-btn warning" onclick="openChildWin()">Child Window</button>
-        </div>
-        <div id="win-result" data-testid="win-result" class="lab-result">Click a button to open a window/tab…</div>
-      </div>
+<!-- 11. Table -->
+<div class="lab-card">
+  <div class="lab-card-title">📊 Data Table <span class="lab-badge easy">Easy</span></div>
+  <p class="lab-desc">Locate cells, sort columns, filter rows.</p>
+  <div class="lab-elements">
+    <div class="lab-row" style="margin-bottom:.6rem">
+      <input id="table-filter" data-testid="table-filter" class="lab-input" type="text" placeholder="Filter by name…" oninput="filterTable()"/>
     </div>
+    <table id="lab-table" data-testid="lab-table" class="lab-table">
+      <thead><tr>
+        <th id="th-id" data-testid="th-id" onclick="sortTable(0)" style="cursor:pointer">ID ↕</th>
+        <th id="th-name" data-testid="th-name" onclick="sortTable(1)" style="cursor:pointer">Name ↕</th>
+        <th id="th-tool" data-testid="th-tool" onclick="sortTable(2)" style="cursor:pointer">Tool ↕</th>
+        <th id="th-lvl" data-testid="th-lvl" onclick="sortTable(3)" style="cursor:pointer">Level ↕</th>
+      </tr></thead>
+      <tbody id="table-body" data-testid="table-body">
+        <tr><td>001</td><td>Vishruth</td><td>Selenium</td><td>Expert</td></tr>
+        <tr><td>002</td><td>Ranjini</td><td>Postman</td><td>Mid</td></tr>
+        <tr><td>003</td><td>Arjun</td><td>PyTest</td><td>Senior</td></tr>
+        <tr><td>004</td><td>Priya</td><td>Cypress</td><td>Junior</td></tr>
+        <tr><td>005</td><td>Kiran</td><td>Appium</td><td>Mid</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-    <!-- ── 3. IFRAMES ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">🖼️</span>iFrames<span class="lab-badge medium">Medium</span></div>
-      <p class="lab-desc">Switch into frames using <code>driver.switch_to.frame()</code>.</p>
-      <div class="lab-elements">
-        <div class="lab-iframe-wrap">
-          <iframe id="iframe-1" data-testid="iframe-1" class="lab-iframe"
-            srcdoc='<html><body style="margin:0;padding:12px;font-family:monospace;font-size:13px;background:#0d1117;color:#63b3ed"><p>📄 <strong>Frame 1</strong></p><input id="iframe-input-1" data-testid="iframe-input" placeholder="Type inside Frame 1" style="background:#111;border:1px solid #333;color:#e2e8f0;padding:6px;border-radius:4px;width:80%;outline:none;font-family:monospace"><br><br><button id="iframe-btn-1" onclick="document.getElementById("iframe-out").textContent="Clicked at "+new Date().toLocaleTimeString()" style="background:#63b3ed;color:#000;border:none;padding:6px 14px;border-radius:4px;cursor:pointer;font-family:monospace">Click Me</button><p id="iframe-out" style="color:#68d391"></p></body></html>'>
-          </iframe>
-          <span class="lab-iframe-label">iframe #1</span>
-        </div>
-        <div class="lab-iframe-wrap" style="margin-top:.6rem">
-          <iframe id="iframe-2" data-testid="iframe-2" class="lab-iframe"
-            srcdoc='<html><body style="margin:0;padding:12px;font-family:monospace;font-size:13px;background:#0d1117;color:#9f7aea"><p>📄 <strong>Frame 2 (nested)</strong></p><select id="iframe-select" data-testid="iframe-select" style="background:#111;border:1px solid #333;color:#e2e8f0;padding:6px;border-radius:4px;font-family:monospace"><option>Option A</option><option>Option B</option><option>Option C</option></select><br><br><p id="iframe-out2" style="color:#68d391;font-size:12px"></p><button onclick="document.getElementById("iframe-out2").textContent="Selected: "+document.getElementById("iframe-select").value" style="background:#9f7aea;color:#fff;border:none;padding:6px 14px;border-radius:4px;cursor:pointer;font-family:monospace;margin-top:6px">Get Value</button></body></html>'>
-          </iframe>
-          <span class="lab-iframe-label">iframe #2</span>
-        </div>
-      </div>
+<!-- 12. Counter -->
+<div class="lab-card">
+  <div class="lab-card-title">🔢 Counter &amp; Range Slider <span class="lab-badge easy">Easy</span></div>
+  <p class="lab-desc">Incrementing values and sliders — test number inputs.</p>
+  <div class="lab-elements">
+    <div class="lab-row" style="align-items:center;justify-content:center;gap:1.2rem;padding:.5rem 0">
+      <button id="btn-decrement" data-testid="btn-decrement" class="lab-btn danger" onclick="changeCount(-1)" style="width:36px;height:36px;padding:0;font-size:1.2rem">−</button>
+      <span id="counter-val" data-testid="counter-val" class="lab-counter-num">0</span>
+      <button id="btn-increment" data-testid="btn-increment" class="lab-btn success" onclick="changeCount(1)" style="width:36px;height:36px;padding:0;font-size:1.2rem">+</button>
     </div>
-
-    <!-- ── 4. FORMS ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">📝</span>Form Elements<span class="lab-badge easy">Easy</span></div>
-      <p class="lab-desc">Text, email, password, number, date, textarea, and file inputs.</p>
-      <div class="lab-elements">
-        <form id="lab-form" data-testid="lab-form" onsubmit="submitLabForm(event)">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.6rem">
-            <input id="lab-name"     data-testid="lab-name"     class="lab-input" type="text"     placeholder="Full Name" />
-            <input id="lab-email"    data-testid="lab-email"    class="lab-input" type="email"    placeholder="Email" />
-            <input id="lab-password" data-testid="lab-password" class="lab-input" type="password" placeholder="Password" />
-            <input id="lab-number"   data-testid="lab-number"   class="lab-input" type="number"   placeholder="Age" min="1" max="99" />
-            <input id="lab-date"     data-testid="lab-date"     class="lab-input" type="date"     style="grid-column:span 2" />
-          </div>
-          <textarea id="lab-textarea" data-testid="lab-textarea" class="lab-textarea" placeholder="Your message…"></textarea>
-          <div style="margin-top:.6rem;display:flex;gap:.6rem">
-            <button type="submit" id="lab-form-submit" data-testid="lab-form-submit" class="lab-btn primary">Submit Form</button>
-            <button type="reset"  id="lab-form-reset"  data-testid="lab-form-reset"  class="lab-btn secondary">Reset</button>
-          </div>
-        </form>
-        <div id="form-result" data-testid="form-result" class="lab-result" style="display:none"></div>
-      </div>
+    <div class="lab-row" style="align-items:center;gap:.7rem">
+      <input id="lab-range" data-testid="lab-range" type="range" min="0" max="100" value="50" class="lab-range" style="flex:1" oninput="document.getElementById('range-val').textContent=this.value"/>
+      <span id="range-val" data-testid="range-val" class="lab-range-val">50</span>
     </div>
+    <button id="btn-reset-counter" data-testid="btn-reset-counter" class="lab-btn secondary" onclick="counterVal=0;document.getElementById('counter-val').textContent='0'">Reset</button>
+  </div>
+</div>
 
-    <!-- ── 5. DROPDOWNS & SELECTS ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">📋</span>Dropdowns &amp; Selects<span class="lab-badge easy">Easy</span></div>
-      <p class="lab-desc">Single, multi-select, and dynamic option loading.</p>
-      <div class="lab-elements">
-        <div class="lab-row">
-          <select id="lab-single-select" data-testid="lab-single-select" class="lab-select" onchange="selectChanged(this,'select-result')">
-            <option value="">-- Choose Role --</option>
-            <option value="qa">QA Engineer</option>
-            <option value="dev">Developer</option>
-            <option value="devops">DevOps Engineer</option>
-            <option value="pm">Product Manager</option>
-          </select>
-          <select id="lab-multi-select" data-testid="lab-multi-select" class="lab-select" multiple size="3" onchange="multiSelectChanged()">
-            <option value="selenium">Selenium</option>
-            <option value="playwright">Playwright</option>
-            <option value="cypress">Cypress</option>
-            <option value="appium">Appium</option>
-          </select>
-        </div>
-        <div class="lab-row" style="margin-top:.4rem">
-          <button id="btn-load-options" data-testid="btn-load-options" class="lab-btn secondary" onclick="loadDynamicOptions()">Load Dynamic Options</button>
-          <select id="lab-dynamic-select" data-testid="lab-dynamic-select" class="lab-select"><option>— Load first —</option></select>
-        </div>
-        <div id="select-result" data-testid="select-result" class="lab-result">Select something…</div>
-      </div>
+<!-- 13. File Upload -->
+<div class="lab-card">
+  <div class="lab-card-title">📁 File Upload <span class="lab-badge medium">Medium</span></div>
+  <p class="lab-desc">Practice <code>send_keys(filepath)</code> on file inputs.</p>
+  <div class="lab-elements">
+    <label id="file-drop-zone" data-testid="file-drop-zone" class="lab-file-zone" ondragover="event.preventDefault();this.classList.add('drag-over')" ondragleave="this.classList.remove('drag-over')" ondrop="handleFileDrop(event)">
+      <input id="file-input" data-testid="file-input" type="file" class="lab-file-input" multiple onchange="fileSelected(this)"/>
+      <div>📂 Click or drag files here</div>
+      <div style="font-size:.7rem;margin-top:.3rem;color:var(--muted)">Accepts any file type</div>
+    </label>
+    <div id="file-result" data-testid="file-result" class="lab-result">No file selected</div>
+  </div>
+</div>
+
+<!-- 14. Notifications -->
+<div class="lab-card">
+  <div class="lab-card-title">🔕 Notification Toasts <span class="lab-badge easy">Easy</span></div>
+  <p class="lab-desc">Auto-dismissing toasts — test visibility and disappearance.</p>
+  <div class="lab-elements">
+    <div class="lab-row">
+      <button id="btn-notif-success" data-testid="btn-notif-success" class="lab-btn success" onclick="showNotif('✅','Test passed!','#22c55e')">Success</button>
+      <button id="btn-notif-error" data-testid="btn-notif-error" class="lab-btn danger" onclick="showNotif('❌','Test failed!','#ef4444')">Error</button>
+      <button id="btn-notif-info" data-testid="btn-notif-info" class="lab-btn primary" onclick="showNotif('ℹ️','New test run.','var(--accent)')">Info</button>
+      <button id="btn-notif-warn" data-testid="btn-notif-warn" class="lab-btn warning" onclick="showNotif('⚠️','Flaky test!','#f59e0b')">Warning</button>
     </div>
+    <div style="font-size:.75rem;color:var(--muted);margin-top:.5rem">→ Appears top-right, auto-dismisses after 3s</div>
+  </div>
+</div>
 
-    <!-- ── 6. CHECKBOXES & RADIOS ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">☑️</span>Checkboxes &amp; Radios<span class="lab-badge easy">Easy</span></div>
-      <p class="lab-desc">Individual, group, select-all, and indeterminate states.</p>
-      <div class="lab-elements">
-        <div class="lab-check-row">
-          <label class="lab-check-item"><input type="checkbox" id="chk-selenium" data-testid="chk-selenium" value="Selenium" onchange="updateCheckResult()"> Selenium</label>
-          <label class="lab-check-item"><input type="checkbox" id="chk-pytest"   data-testid="chk-pytest"   value="PyTest"   onchange="updateCheckResult()"> PyTest</label>
-          <label class="lab-check-item"><input type="checkbox" id="chk-postman"  data-testid="chk-postman"  value="Postman"  onchange="updateCheckResult()"> Postman</label>
-          <label class="lab-check-item"><input type="checkbox" id="chk-jira"     data-testid="chk-jira"     value="JIRA"     onchange="updateCheckResult()"> JIRA</label>
-        </div>
-        <div class="lab-row" style="margin-top:.4rem">
-          <button id="btn-check-all"  data-testid="btn-check-all"  class="lab-btn secondary" onclick="checkAll(true)">Check All</button>
-          <button id="btn-uncheck-all" data-testid="btn-uncheck-all" class="lab-btn secondary" onclick="checkAll(false)">Uncheck All</button>
-        </div>
-        <p style="font-size:.78rem;color:var(--muted);margin:.5rem 0 .3rem">Experience:</p>
-        <div class="lab-check-row">
-          <label class="lab-check-item"><input type="radio" id="rad-junior" data-testid="rad-junior" name="exp" value="Junior"  onchange="updateCheckResult()"> Junior</label>
-          <label class="lab-check-item"><input type="radio" id="rad-mid"    data-testid="rad-mid"    name="exp" value="Mid"     onchange="updateCheckResult()"> Mid</label>
-          <label class="lab-check-item"><input type="radio" id="rad-senior" data-testid="rad-senior" name="exp" value="Senior"  onchange="updateCheckResult()"> Senior</label>
-        </div>
-        <div id="check-result" data-testid="check-result" class="lab-result">Check some options…</div>
-      </div>
-    </div>
+<!-- 15. Keyboard -->
+<div class="lab-card">
+  <div class="lab-card-title">⌨️ Keyboard Events <span class="lab-badge medium">Medium</span></div>
+  <p class="lab-desc">Test key press, Enter submit, and shortcut detection.</p>
+  <div class="lab-elements">
+    <input id="key-input" data-testid="key-input" class="lab-input" type="text" placeholder="Type here — keys are logged…" onkeydown="logKey(event)" onkeyup="if(event.key!=='Escape')event.target.style.borderColor=''"/>
+    <div id="key-result" data-testid="key-result" class="lab-result">Last key: —</div>
+    <div style="font-size:.75rem;color:var(--muted);margin-top:.4rem">Try: <code>Enter</code> · <code>Escape</code> · <code>Tab</code> · <code>Ctrl+A</code></div>
+  </div>
+</div>
 
-    <!-- ── 7. DYNAMIC ELEMENTS ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">⚡</span>Dynamic Elements<span class="lab-badge medium">Medium</span></div>
-      <p class="lab-desc">Elements that appear/disappear, load with delay, or change state.</p>
-      <div class="lab-elements">
-        <div class="lab-row">
-          <button id="btn-show-delayed"   data-testid="btn-show-delayed"   class="lab-btn primary"   onclick="showDelayed()">Show After 2s</button>
-          <button id="btn-toggle-elem"    data-testid="btn-toggle-elem"    class="lab-btn secondary" onclick="toggleElem()">Toggle Element</button>
-          <button id="btn-add-remove"     data-testid="btn-add-remove"     class="lab-btn warning"   onclick="addTag()">Add Tag</button>
-          <button id="btn-clear-tags"     data-testid="btn-clear-tags"     class="lab-btn danger"    onclick="clearTags()">Clear</button>
-        </div>
-        <div id="dynamic-area"    data-testid="dynamic-area"    class="lab-dynamic-area">Dynamic content area…</div>
-        <div id="delayed-element" data-testid="delayed-element" style="display:none;margin-top:.5rem;padding:.5rem .8rem;background:rgba(104,211,145,.1);border:1px solid rgba(104,211,145,.3);border-radius:6px;font-size:.78rem;color:var(--accent3)">
-          ✓ I appeared after a 2-second delay!
-        </div>
-      </div>
-    </div>
+</div><!-- /lab-grid -->
+</div><!-- /lab-content -->
 
-    <!-- ── 8. WAITS & LOADING ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">⏳</span>Waits &amp; Loading States<span class="lab-badge medium">Medium</span></div>
-      <p class="lab-desc">Simulate async loading, spinners, and progress bars.</p>
-      <div class="lab-elements">
-        <div class="lab-row">
-          <button id="btn-start-progress" data-testid="btn-start-progress" class="lab-btn primary"   onclick="startProgress()">Start Progress</button>
-          <button id="btn-fake-ajax"      data-testid="btn-fake-ajax"      class="lab-btn secondary" onclick="fakeAjax()">Fake AJAX Call</button>
-          <button id="btn-reset-progress" data-testid="btn-reset-progress" class="lab-btn danger"    onclick="resetProgress()">Reset</button>
-        </div>
-        <div class="lab-progress-wrap" style="margin:.5rem 0">
-          <div id="lab-progress-bar" data-testid="lab-progress-bar" class="lab-progress-bar"></div>
-        </div>
-        <div id="progress-pct" data-testid="progress-pct" style="font-size:.75rem;color:var(--muted);text-align:right">0%</div>
-        <div id="loading-area" data-testid="loading-area" class="lab-result" style="display:flex;align-items:center;gap:.7rem">
-          <span id="ajax-status" data-testid="ajax-status">Click "Fake AJAX Call" to simulate a request…</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── 9. DRAG & DROP ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">🖱️</span>Drag &amp; Drop<span class="lab-badge medium">Medium</span></div>
-      <p class="lab-desc">Drag items between zones. Use <code>ActionChains</code> in Selenium.</p>
-      <div class="lab-elements">
-        <p style="font-size:.75rem;color:var(--muted)">Source zone:</p>
-        <div id="drag-source" data-testid="drag-source" class="lab-row" style="gap:.5rem;flex-wrap:wrap">
-          <div id="drag-1" data-testid="drag-1" class="lab-drag-item" draggable="true" ondragstart="dragStart(event)">🔴 Item 1</div>
-          <div id="drag-2" data-testid="drag-2" class="lab-drag-item" draggable="true" ondragstart="dragStart(event)">🟡 Item 2</div>
-          <div id="drag-3" data-testid="drag-3" class="lab-drag-item" draggable="true" ondragstart="dragStart(event)">🟢 Item 3</div>
-        </div>
-        <p style="font-size:.75rem;color:var(--muted);margin-top:.5rem">Drop zone:</p>
-        <div id="drop-zone" data-testid="drop-zone" class="lab-dropzone"
-          ondragover="event.preventDefault();this.classList.add('drag-over')"
-          ondragleave="this.classList.remove('drag-over')"
-          ondrop="dropItem(event)">
-        </div>
-        <button id="btn-reset-drag" data-testid="btn-reset-drag" class="lab-btn secondary" style="margin-top:.5rem" onclick="resetDrag()">Reset</button>
-      </div>
-    </div>
-
-    <!-- ── 10. TOOLTIPS & HOVER ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">💬</span>Tooltips &amp; Hover Effects<span class="lab-badge easy">Easy</span></div>
-      <p class="lab-desc">Hover states and tooltips. Use <code>ActionChains.move_to_element()</code>.</p>
-      <div class="lab-elements">
-        <div class="lab-row" style="flex-wrap:wrap;gap:.8rem">
-          <div class="lab-tooltip-wrap">
-            <button id="tooltip-btn-1" data-testid="tooltip-btn-1" class="lab-btn primary">Hover me ①</button>
-            <span class="lab-tooltip-box">Tooltip: QA Engineer</span>
-          </div>
-          <div class="lab-tooltip-wrap">
-            <button id="tooltip-btn-2" data-testid="tooltip-btn-2" class="lab-btn secondary">Hover me ②</button>
-            <span class="lab-tooltip-box">Tooltip: Selenium Expert</span>
-          </div>
-          <div class="lab-tooltip-wrap">
-            <span id="tooltip-icon" data-testid="tooltip-icon" style="cursor:none;font-size:1.2rem">ℹ️</span>
-            <span class="lab-tooltip-box">Icon tooltip works too!</span>
-          </div>
-        </div>
-        <div id="hover-card-1" data-testid="hover-card-1" class="lab-hover-card" style="margin-top:.7rem" onmouseenter="logHover('hover-card-1','hov-result')" onmouseleave="logHoverOut('hov-result')">
-          Hover over this card — it transforms!
-        </div>
-        <div id="hov-result" data-testid="hov-result" class="lab-result">Hover a card or button…</div>
-      </div>
-    </div>
-
-    <!-- ── 11. TABLE ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">📊</span>Data Table<span class="lab-badge easy">Easy</span></div>
-      <p class="lab-desc">Practice locating cells, rows, sorting, and filtering table data.</p>
-      <div class="lab-elements">
-        <div class="lab-row" style="margin-bottom:.6rem">
-          <input id="table-filter" data-testid="table-filter" class="lab-input" type="text" placeholder="Filter by name…" oninput="filterTable()" />
-        </div>
-        <table id="lab-table" data-testid="lab-table" class="lab-table">
-          <thead>
-            <tr>
-              <th id="th-id"   data-testid="th-id"   onclick="sortTable(0)" style="cursor:none">ID ↕</th>
-              <th id="th-name" data-testid="th-name" onclick="sortTable(1)" style="cursor:none">Name ↕</th>
-              <th id="th-tool" data-testid="th-tool" onclick="sortTable(2)" style="cursor:none">Tool ↕</th>
-              <th id="th-lvl"  data-testid="th-lvl"  onclick="sortTable(3)" style="cursor:none">Level ↕</th>
-            </tr>
-          </thead>
-          <tbody id="table-body" data-testid="table-body">
-            <tr><td>001</td><td>Vishruth</td><td>Selenium</td><td>Expert</td></tr>
-            <tr><td>002</td><td>Ranjini</td><td>Postman</td><td>Mid</td></tr>
-            <tr><td>003</td><td>Arjun</td><td>PyTest</td><td>Senior</td></tr>
-            <tr><td>004</td><td>Priya</td><td>Cypress</td><td>Junior</td></tr>
-            <tr><td>005</td><td>Kiran</td><td>Appium</td><td>Mid</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- ── 12. COUNTERS & RANGE ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">🔢</span>Counter &amp; Range Slider<span class="lab-badge easy">Easy</span></div>
-      <p class="lab-desc">Incrementing values and sliders — test number inputs and JS state.</p>
-      <div class="lab-elements">
-        <div class="lab-row" style="align-items:center;justify-content:center;gap:1.2rem;padding:.5rem 0">
-          <button id="btn-decrement" data-testid="btn-decrement" class="lab-btn danger"   onclick="changeCount(-1)" style="width:36px;height:36px;padding:0;font-size:1.2rem">−</button>
-          <span   id="counter-val"  data-testid="counter-val"   class="lab-counter-num">0</span>
-          <button id="btn-increment" data-testid="btn-increment" class="lab-btn success" onclick="changeCount(1)"  style="width:36px;height:36px;padding:0;font-size:1.2rem">+</button>
-        </div>
-        <div class="lab-row" style="align-items:center;gap:.7rem">
-          <input id="lab-range" data-testid="lab-range" type="range" min="0" max="100" value="50" class="lab-range" style="flex:1" oninput="rangeChanged(this)"/>
-          <span  id="range-val" data-testid="range-val" class="lab-range-val">50</span>
-        </div>
-        <button id="btn-reset-counter" data-testid="btn-reset-counter" class="lab-btn secondary" onclick="resetCounter()">Reset Counter</button>
-      </div>
-    </div>
-
-    <!-- ── 13. FILE UPLOAD ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">📁</span>File Upload<span class="lab-badge medium">Medium</span></div>
-      <p class="lab-desc">Practice <code>send_keys(filepath)</code> on file inputs.</p>
-      <div class="lab-elements">
-        <label id="file-drop-zone" data-testid="file-drop-zone" class="lab-file-zone"
-          ondragover="event.preventDefault();this.classList.add('drag-over')"
-          ondragleave="this.classList.remove('drag-over')"
-          ondrop="handleFileDrop(event)">
-          <input id="file-input" data-testid="file-input" type="file" class="lab-file-input" multiple onchange="fileSelected(this)" />
-          <div>📂 Click or drag files here</div>
-          <div style="font-size:.7rem;margin-top:.3rem;color:var(--muted)">Accepts any file type</div>
-        </label>
-        <div id="file-result" data-testid="file-result" class="lab-result">No file selected</div>
-      </div>
-    </div>
-
-    <!-- ── 14. NOTIFICATIONS ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">🔕</span>Notification Toasts<span class="lab-badge easy">Easy</span></div>
-      <p class="lab-desc">Auto-dismissing toasts. Test for element visibility and disappearance.</p>
-      <div class="lab-elements">
-        <div class="lab-row">
-          <button id="btn-notif-success" data-testid="btn-notif-success" class="lab-btn success" onclick="showNotif('✅','Test passed successfully!','#22c55e')">Success</button>
-          <button id="btn-notif-error"   data-testid="btn-notif-error"   class="lab-btn danger"  onclick="showNotif('❌','Test failed! Check logs.','#ef4444')">Error</button>
-          <button id="btn-notif-info"    data-testid="btn-notif-info"    class="lab-btn primary"  onclick="showNotif('ℹ️','New test run started.','var(--accent)')">Info</button>
-          <button id="btn-notif-warn"    data-testid="btn-notif-warn"    class="lab-btn warning"  onclick="showNotif('⚠️','Flaky test detected!','#f59e0b')">Warning</button>
-        </div>
-        <div style="font-size:.75rem;color:var(--muted);margin-top:.5rem">→ Notifications appear top-right and auto-dismiss after 3s</div>
-      </div>
-    </div>
-
-    <!-- ── 15. KEYBOARD & SHORTCUTS ── -->
-    <div class="lab-card reveal">
-      <div class="lab-card-title"><span class="lab-icon">⌨️</span>Keyboard Events<span class="lab-badge medium">Medium</span></div>
-      <p class="lab-desc">Test key press, Enter submit, and keyboard shortcut detection.</p>
-      <div class="lab-elements">
-        <input id="key-input" data-testid="key-input" class="lab-input" type="text"
-          placeholder="Type here — keys are logged…"
-          onkeydown="logKey(event)" onkeyup="keyUp(event)" />
-        <div id="key-result" data-testid="key-result" class="lab-result">Last key: —</div>
-        <div style="font-size:.75rem;color:var(--muted);margin-top:.4rem">Try: <code>Enter</code> · <code>Escape</code> · <code>Tab</code> · <code>Ctrl+A</code></div>
-      </div>
-    </div>
-
-  </div><!-- /lab-grid -->
-</section>
-
-<!-- LAB MODAL -->
-<div id="lab-modal-overlay" data-testid="lab-modal-overlay" class="lab-modal-overlay" onclick="closeLabModal(event)">
+<!-- Modal -->
+<div id="lab-modal-overlay" data-testid="lab-modal-overlay" class="lab-modal-overlay" onclick="if(event.target===this)closeLabModal()">
   <div id="lab-modal-box" data-testid="lab-modal-box" class="lab-modal-box">
     <button id="lab-modal-close" data-testid="lab-modal-close" class="lab-modal-close" onclick="closeLabModal()">✕</button>
-    <div id="lab-modal-title" class="lab-modal-title">Modal Dialog</div>
-    <div id="lab-modal-body"  class="lab-modal-body" data-testid="lab-modal-body">
-      This is an in-page modal. Practice locating overlays and interacting with modal content.
-    </div>
+    <div class="lab-modal-title">In-Page Modal Dialog</div>
+    <div id="lab-modal-body" class="lab-modal-body" data-testid="lab-modal-body">This is an in-page modal. <code>data-testid="lab-modal-box"</code>. Practice locating overlays and interacting with modal content.</div>
     <div class="lab-modal-footer">
       <button id="lab-modal-cancel" data-testid="lab-modal-cancel" class="lab-btn secondary" onclick="closeLabModal()">Cancel</button>
-      <button id="lab-modal-confirm" data-testid="lab-modal-confirm" class="lab-btn primary" onclick="confirmModal()">Confirm</button>
-    </div>
-  </div>
-</div>
-
-<!-- NOTIFICATION STACK -->
-<div id="lab-notif-stack" class="lab-notif-stack"></div>
-</div>
-
-<!-- LAB MODAL -->
-<div id="lab-modal-overlay" data-testid="lab-modal-overlay" class="lab-modal-overlay" onclick="closeLabModal(event)">
-  <div id="lab-modal-box" data-testid="lab-modal-box" class="lab-modal-box">
-    <button id="lab-modal-close" data-testid="lab-modal-close" class="lab-modal-close" onclick="closeLabModal()">✕</button>
-    <div id="lab-modal-title" class="lab-modal-title">Modal Dialog</div>
-    <div id="lab-modal-body" class="lab-modal-body" data-testid="lab-modal-body">
-      This is an in-page modal. Practice locating overlays and interacting with modal content.
-    </div>
-    <div class="lab-modal-footer">
-      <button id="lab-modal-cancel"  data-testid="lab-modal-cancel"  class="lab-btn secondary" onclick="closeLabModal()">Cancel</button>
-      <button id="lab-modal-confirm" data-testid="lab-modal-confirm" class="lab-btn primary"   onclick="confirmModal()">Confirm</button>
+      <button id="lab-modal-confirm" data-testid="lab-modal-confirm" class="lab-btn primary" onclick="closeLabModal();setResult('popup-result','✓ Modal confirmed')">Confirm</button>
     </div>
   </div>
 </div>
 <div id="lab-notif-stack" class="lab-notif-stack"></div>
 
-<footer style="padding:1.5rem 3rem;border-top:1px solid var(--border);font-size:.72rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem">
-  <span>QA Practice Lab &middot; Built by <a href="/" style="color:var(--accent);text-decoration:none">Vishruth S R</a></span>
-  <span>Every element has <code style="background:var(--surface2);color:var(--accent);padding:.1rem .3rem;border-radius:3px">id</code> + <code style="background:var(--surface2);color:var(--accent);padding:.1rem .3rem;border-radius:3px">data-testid</code></span>
+<footer>
+  <span>QA Practice Lab · <a href="/" style="color:var(--accent);text-decoration:none">Vishruth S R</a></span>
+  <span>Every element: <code style="background:var(--surface2);color:var(--accent);padding:.1rem .3rem;border-radius:3px">id</code> + <code style="background:var(--surface2);color:var(--accent);padding:.1rem .3rem;border-radius:3px">data-testid</code></span>
 </footer>
 
 <script>
-/* THEME */
 var TK='vsr-theme';
 function applyTheme(m){document.body.classList.toggle('light',m==='light');var e=document.getElementById('te');if(e)e.textContent=m==='light'?'☀️':'🌙';}
 function toggleTheme(){var n=document.body.classList.contains('light')?'dark':'light';localStorage.setItem(TK,n);applyTheme(n);}
 applyTheme(localStorage.getItem(TK)||'dark');
 
-/* Scroll reveal */
-var rIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0,rootMargin:'0px 0px -20px 0px'});
-document.querySelectorAll('.reveal').forEach(function(el){rIO.observe(el);});
-
-/* ══════════════════════════════════════════════════
-   QA PRACTICE LAB — JavaScript
-══════════════════════════════════════════════════ */
-
-/* ── Helpers ── */
-function setResult(id, msg, type) {
-  var el = document.getElementById(id);
-  if (!el) return;
-  el.textContent = msg;
-  el.className = 'lab-result' + (type ? ' ' + type : '');
-  el.style.display = '';
-}
-
-/* ── 1. Popups & Alerts ── */
-function triggerAlert() {
-  alert('🔔 Alert! This is a browser alert dialog.\nSelenium: driver.switch_to.alert.accept()');
-  setResult('popup-result', '✓ Alert was dismissed');
-}
-function triggerConfirm() {
-  var r = window.confirm('Are you sure you want to proceed?\nClick OK or Cancel.');
-  setResult('popup-result', r ? '✓ Confirmed (OK clicked)' : '✗ Cancelled (Cancel clicked)', r ? '' : 'warn');
-}
-function triggerPrompt() {
-  var r = window.prompt('Enter your name:', 'Vishruth');
-  setResult('popup-result', r !== null ? '✓ Entered: "' + r + '"' : '✗ Prompt cancelled', r !== null ? '' : 'warn');
-}
-function openLabModal(type) {
-  document.getElementById('lab-modal-overlay').classList.add('open');
-  document.getElementById('lab-modal-title').textContent = 'In-Page Modal Dialog';
-  document.getElementById('lab-modal-body').textContent = 'This is an in-page modal. data-testid="lab-modal-box". Practice locating overlays and interacting with modal content using Selenium or Playwright.';
-  setResult('popup-result', '→ Modal is now open (data-testid="lab-modal-overlay")');
-}
-function closeLabModal(e) {
-  if (!e || e.target === document.getElementById('lab-modal-overlay') || e.currentTarget.tagName === 'BUTTON') {
-    document.getElementById('lab-modal-overlay').classList.remove('open');
-  }
-}
-function confirmModal() {
-  document.getElementById('lab-modal-overlay').classList.remove('open');
-  setResult('popup-result', '✓ Modal confirmed and closed');
-}
-
-/* ── 2. Windows & Tabs ── */
-function openPopupWin() {
-  var w = window.open('', 'popup', 'width=480,height=360,scrollbars=yes');
-  w.document.write('<html><head><title>Popup Window</title></head><body style="font-family:monospace;padding:20px;background:#04060f;color:#63b3ed"><h2>Popup Window</h2><p>ID: popup-window</p><p>This is a popup window opened with <code>window.open()</code></p><p>Selenium: <code>driver.switch_to.window(handle)</code></p><button onclick="window.close()" style="padding:8px 16px;background:#63b3ed;color:#000;border:none;border-radius:4px;cursor:pointer;font-family:monospace">Close Me</button></body></html>');
-  setResult('win-result', '✓ Popup window opened — switch to it with driver.switch_to.window()');
-}
-function openChildWin() {
-  var w = window.open('', 'child', 'width=520,height=400');
-  w.document.write('<html><head><title>Child Window</title></head><body style="font-family:monospace;padding:20px;background:#0a0d18;color:#9f7aea"><h2>Child Window</h2><p>This child window has its own DOM.</p><input id="child-input" data-testid="child-input" placeholder="Type here from child" style="background:#111;border:1px solid #333;color:#e2e8f0;padding:8px;border-radius:4px;font-family:monospace;width:80%;outline:none"><br><br><button id="child-btn" onclick="document.getElementById('res').textContent='Clicked!'" style="padding:8px 16px;background:#9f7aea;color:#fff;border:none;border-radius:4px;cursor:pointer;font-family:monospace">Click Me</button><p id="res" style="color:#68d391"></p><button onclick="window.close()" style="margin-top:10px;padding:8px 16px;background:#ef4444;color:#fff;border:none;border-radius:4px;cursor:pointer;font-family:monospace">Close</button></body></html>');
-  setResult('win-result', '✓ Child window opened — window handles: ' + window.frames.length + ' frame(s)');
-}
-
-/* ── 4. Forms ── */
-function submitLabForm(e) {
-  e.preventDefault();
-  var data = {
-    name:     document.getElementById('lab-name').value     || '(empty)',
-    email:    document.getElementById('lab-email').value    || '(empty)',
-    password: document.getElementById('lab-password').value ? '***' : '(empty)',
-    number:   document.getElementById('lab-number').value   || '(empty)',
-    date:     document.getElementById('lab-date').value     || '(empty)',
-    message:  document.getElementById('lab-textarea').value || '(empty)',
-  };
-  setResult('form-result', '✓ Submitted — Name: ' + data.name + ' | Email: ' + data.email + ' | Age: ' + data.number + ' | Date: ' + data.date);
-}
-
-/* ── 5. Dropdowns ── */
-function selectChanged(el, resultId) {
-  setResult(resultId, el.value ? '✓ Selected: ' + el.options[el.selectedIndex].text : 'Nothing selected');
-}
-function multiSelectChanged() {
-  var sel = document.getElementById('lab-multi-select');
-  var vals = Array.from(sel.selectedOptions).map(function(o){ return o.text; });
-  setResult('select-result', vals.length ? '✓ Multi-selected: ' + vals.join(', ') : 'Nothing selected');
-}
-function loadDynamicOptions() {
-  var sel = document.getElementById('lab-dynamic-select');
-  sel.innerHTML = '<option>Loading…</option>';
-  setTimeout(function() {
-    sel.innerHTML = [
-      'Python 3.x','Java 17','JavaScript','TypeScript','Ruby'
-    ].map(function(v,i){ return '<option value="lang-'+i+'">'+v+'</option>'; }).join('');
-    setResult('select-result', '✓ Dynamic options loaded! (' + sel.options.length + ' items)');
-  }, 1200);
-}
-
-/* ── 6. Checkboxes ── */
-function updateCheckResult() {
-  var tools = ['chk-selenium','chk-pytest','chk-postman','chk-jira'];
-  var checked = tools.filter(function(id){ return document.getElementById(id).checked; })
-                     .map(function(id){ return document.getElementById(id).value; });
-  var radios = document.querySelectorAll('input[name="exp"]');
-  var exp = '';
-  radios.forEach(function(r){ if(r.checked) exp = r.value; });
-  var msg = checked.length ? 'Tools: ' + checked.join(', ') : 'No tools selected';
-  if (exp) msg += ' | Level: ' + exp;
-  setResult('check-result', msg);
-}
-function checkAll(state) {
-  ['chk-selenium','chk-pytest','chk-postman','chk-jira'].forEach(function(id){
-    document.getElementById(id).checked = state;
-  });
-  updateCheckResult();
-}
-
-/* ── 7. Dynamic elements ── */
-var tagCount = 0;
-function showDelayed() {
-  var el = document.getElementById('delayed-element');
-  el.style.display = 'none';
-  setResult('dynamic-area', 'Waiting 2 seconds…');
-  setTimeout(function() {
-    el.style.display = 'block';
-    document.getElementById('dynamic-area').textContent = '✓ Delayed element appeared!';
-  }, 2000);
-}
-function toggleElem() {
-  var area = document.getElementById('dynamic-area');
-  area.style.display = area.style.display === 'none' ? '' : 'none';
-}
-function addTag() {
-  tagCount++;
-  var area = document.getElementById('dynamic-area');
-  var tag  = document.createElement('span');
-  tag.className = 'lab-dynamic-tag';
-  tag.id = 'dynamic-tag-' + tagCount;
-  tag.setAttribute('data-testid', 'dynamic-tag-' + tagCount);
-  tag.textContent = 'Tag #' + tagCount;
-  if (area.textContent === 'Dynamic content area…') area.textContent = '';
-  area.appendChild(tag);
-}
-function clearTags() {
-  tagCount = 0;
-  document.getElementById('dynamic-area').textContent = 'Dynamic content area…';
-  document.getElementById('delayed-element').style.display = 'none';
-}
-
-/* ── 8. Progress / AJAX ── */
-var progInterval = null, progVal = 0;
-function startProgress() {
-  if (progInterval) return;
-  progVal = 0;
-  progInterval = setInterval(function() {
-    progVal = Math.min(progVal + Math.random() * 8, 100);
-    document.getElementById('lab-progress-bar').style.width = progVal + '%';
-    document.getElementById('progress-pct').textContent = Math.round(progVal) + '%';
-    if (progVal >= 100) { clearInterval(progInterval); progInterval = null; document.getElementById('progress-pct').textContent = '✓ 100% Complete'; }
-  }, 200);
-}
-function resetProgress() {
-  clearInterval(progInterval); progInterval = null; progVal = 0;
-  document.getElementById('lab-progress-bar').style.width = '0%';
-  document.getElementById('progress-pct').textContent = '0%';
-  document.getElementById('ajax-status').textContent = 'Click "Fake AJAX Call" to simulate a request…';
-  var sp = document.getElementById('ajax-spinner');
-  if (sp) sp.remove();
-}
-function fakeAjax() {
-  var area    = document.getElementById('loading-area');
-  var statusEl= document.getElementById('ajax-status');
-  // add spinner
-  var old = document.getElementById('ajax-spinner');
-  if (old) old.remove();
-  var sp = document.createElement('span');
-  sp.id = 'ajax-spinner'; sp.className = 'lab-spinner';
-  area.insertBefore(sp, statusEl);
-  statusEl.textContent = 'Fetching data…';
-  setTimeout(function() {
-    if (sp.parentNode) sp.remove();
-    statusEl.textContent = '✓ Response: {"status":200,"data":"Test run #' + Math.floor(Math.random()*9000+1000) + ' completed"}';
-  }, 2000);
-}
-
-/* ── 9. Drag & Drop ── */
-var draggedId = null;
-var originalParent = null;
-function dragStart(e) {
-  draggedId = e.target.id;
-  originalParent = e.target.parentNode;
-  e.dataTransfer.setData('text/plain', e.target.id);
-  e.target.style.opacity = '0.5';
-}
-function dropItem(e) {
-  e.preventDefault();
-  this.classList.remove('drag-over');
-  var id = e.dataTransfer.getData('text/plain');
-  var el = document.getElementById(id);
-  if (el) { el.style.opacity = '1'; this.appendChild(el); }
-}
-function resetDrag() {
-  var source = document.getElementById('drag-source');
-  ['drag-1','drag-2','drag-3'].forEach(function(id){
-    var el = document.getElementById(id);
-    if (el) { el.style.opacity = '1'; source.appendChild(el); }
-  });
-  document.getElementById('drop-zone').innerHTML = '';
-}
-document.addEventListener('dragend', function(e){ if(e.target.classList.contains('lab-drag-item')) e.target.style.opacity='1'; });
-
-/* ── 10. Tooltips / Hover ── */
-function logHover(id, resultId) { setResult(resultId, '✓ Hovered: #' + id + ' at ' + new Date().toLocaleTimeString()); }
-function logHoverOut(resultId)  { setResult(resultId, '↩ Mouse left hover element'); }
-
-/* ── 11. Table ── */
-function filterTable() {
-  var q = document.getElementById('table-filter').value.toLowerCase();
-  document.querySelectorAll('#table-body tr').forEach(function(row) {
-    row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
-  });
-}
-var sortDir = {};
-function sortTable(col) {
-  var tbody = document.getElementById('table-body');
-  var rows  = Array.from(tbody.querySelectorAll('tr'));
-  var dir   = (sortDir[col] = !sortDir[col]);
-  rows.sort(function(a,b){
-    var A = a.cells[col].textContent, B = b.cells[col].textContent;
-    return dir ? A.localeCompare(B,undefined,{numeric:true}) : B.localeCompare(A,undefined,{numeric:true});
-  });
-  rows.forEach(function(r){ tbody.appendChild(r); });
-}
-
-/* ── 12. Counter & Range ── */
-var counterVal = 0;
-function changeCount(delta) {
-  counterVal += delta;
-  document.getElementById('counter-val').textContent = counterVal;
-}
-function resetCounter() { counterVal = 0; document.getElementById('counter-val').textContent = '0'; }
-function rangeChanged(el) { document.getElementById('range-val').textContent = el.value; }
-
-/* ── 13. File Upload ── */
-function fileSelected(input) {
-  var files = Array.from(input.files);
-  if (!files.length) { setResult('file-result','No file selected'); return; }
-  var info = files.map(function(f){ return f.name + ' (' + (f.size/1024).toFixed(1) + ' KB)'; }).join(', ');
-  setResult('file-result', '✓ ' + files.length + ' file(s): ' + info);
-}
-function handleFileDrop(e) {
-  e.preventDefault();
-  document.getElementById('file-drop-zone').classList.remove('drag-over');
-  var files = Array.from(e.dataTransfer.files);
-  var info  = files.map(function(f){ return f.name; }).join(', ');
-  setResult('file-result', '✓ Dropped ' + files.length + ' file(s): ' + info);
-}
-
-/* ── 14. Notifications ── */
-function showNotif(icon, msg, color) {
-  var stack = document.getElementById('lab-notif-stack');
-  var n = document.createElement('div');
-  n.className = 'lab-notif';
-  n.id = 'notif-' + Date.now();
-  n.setAttribute('data-testid', 'lab-notification');
-  n.style.borderLeft = '3px solid ' + color;
-  n.innerHTML = '<span class="lab-notif-icon">' + icon + '</span><span>' + msg + '</span>';
-  stack.appendChild(n);
-  setTimeout(function(){
-    n.classList.add('removing');
-    setTimeout(function(){ if(n.parentNode) n.parentNode.removeChild(n); }, 300);
-  }, 3000);
-}
-
-/* ── 15. Keyboard ── */
-function logKey(e) {
-  var parts = [];
-  if (e.ctrlKey)  parts.push('Ctrl');
-  if (e.shiftKey) parts.push('Shift');
-  if (e.altKey)   parts.push('Alt');
-  if (e.metaKey)  parts.push('Meta');
-  var key = e.key === ' ' ? 'Space' : e.key;
-  if (!['Control','Shift','Alt','Meta'].includes(key)) parts.push(key);
-  var combo = parts.join('+');
-  setResult('key-result', 'keydown: "' + combo + '" | code: ' + e.code + ' | keyCode: ' + e.keyCode);
-  if (e.key === 'Enter')  { e.target.style.borderColor = 'var(--accent3)'; }
-  if (e.key === 'Escape') { e.target.value = ''; e.target.style.borderColor = ''; setResult('key-result','Escape pressed — input cleared'); }
-}
-function keyUp(e) {
-  if (e.key !== 'Escape') e.target.style.borderColor = '';
-}
+function setResult(id,msg,type){var el=document.getElementById(id);if(!el)return;el.textContent=msg;el.className='lab-result'+(type?' '+type:'');el.style.display='';}
+function triggerAlert(){alert('Alert dialog!\nSelenium: driver.switch_to.alert.accept()');setResult('popup-result','✓ Alert dismissed');}
+function triggerConfirm(){var r=window.confirm('Confirm this action?');setResult('popup-result',r?'✓ Confirmed (OK)':'✗ Cancelled',''+( r?'':'warn'));}
+function triggerPrompt(){var r=window.prompt('Enter your name:','Vishruth');setResult('popup-result',r!==null?'✓ Entered: "'+r+'"':'✗ Cancelled');}
+function openLabModal(){document.getElementById('lab-modal-overlay').classList.add('open');setResult('popup-result','→ Modal open (data-testid="lab-modal-overlay")');}
+function closeLabModal(){document.getElementById('lab-modal-overlay').classList.remove('open');}
+function openPopupWin(){var w=window.open('','popup','width=480,height=360');w.document.write('<html><body style="font-family:monospace;padding:20px;background:#04060f;color:#63b3ed"><h2>Popup Window</h2><p>switch_to.window(handle)</p><button onclick="window.close()" style="padding:8px 16px;background:#63b3ed;color:#000;border:none;border-radius:4px;cursor:pointer">Close</button></body></html>');setResult('win-result','✓ Popup opened');}
+function openChildWin(){var w=window.open('','child','width=520,height=400');w.document.write('<html><body style="font-family:monospace;padding:20px;background:#0a0d18;color:#9f7aea"><h2>Child Window</h2><input id="child-input" placeholder="Type here" style="background:#111;border:1px solid #333;color:#e2e8f0;padding:8px;border-radius:4px;font-family:monospace;width:80%"><br><br><button onclick="window.close()" style="padding:8px 16px;background:#ef4444;color:#fff;border:none;border-radius:4px;cursor:pointer">Close</button></body></html>');setResult('win-result','✓ Child window opened');}
+function submitLabForm(e){e.preventDefault();var name=document.getElementById('lab-name').value||'(empty)';var email=document.getElementById('lab-email').value||'(empty)';setResult('form-result','✓ Submitted — Name: '+name+' | Email: '+email);document.getElementById('form-result').style.display='';}
+function multiSel(){var sel=document.getElementById('lab-multi-select');var vals=Array.from(sel.selectedOptions).map(function(o){return o.text;});setResult('select-result',vals.length?'✓ Multi-selected: '+vals.join(', '):'Nothing selected');}
+function loadDynamicOptions(){var sel=document.getElementById('lab-dynamic-select');sel.innerHTML='<option>Loading…</option>';setTimeout(function(){sel.innerHTML=['Python','Java','JavaScript','TypeScript','Ruby'].map(function(v,i){return'<option value="lang-'+i+'">'+v+'</option>';}).join('');setResult('select-result','✓ Dynamic options loaded ('+sel.options.length+' items)');},1200);}
+function updateCheckResult(){var tools=['chk-selenium','chk-pytest','chk-postman','chk-jira'];var checked=tools.filter(function(id){return document.getElementById(id).checked;}).map(function(id){return document.getElementById(id).value;});var exp='';document.querySelectorAll('input[name="exp"]').forEach(function(r){if(r.checked)exp=r.value;});var msg=checked.length?'Tools: '+checked.join(', '):'No tools';if(exp)msg+=' | Level: '+exp;setResult('check-result',msg);}
+function checkAll(state){['chk-selenium','chk-pytest','chk-postman','chk-jira'].forEach(function(id){document.getElementById(id).checked=state;});updateCheckResult();}
+var tagCount=0;
+function showDelayed(){document.getElementById('delayed-element').style.display='none';document.getElementById('dynamic-area').textContent='Waiting 2 seconds…';setTimeout(function(){document.getElementById('delayed-element').style.display='block';document.getElementById('dynamic-area').textContent='✓ Delayed element appeared!';},2000);}
+function toggleElem(){var a=document.getElementById('dynamic-area');a.style.display=a.style.display==='none'?'':'none';}
+function addTag(){tagCount++;var area=document.getElementById('dynamic-area');var tag=document.createElement('span');tag.className='lab-dynamic-tag';tag.id='dynamic-tag-'+tagCount;tag.setAttribute('data-testid','dynamic-tag-'+tagCount);tag.textContent='Tag #'+tagCount;if(area.textContent==='Dynamic content area…')area.textContent='';area.appendChild(tag);}
+function clearTags(){tagCount=0;document.getElementById('dynamic-area').textContent='Dynamic content area…';document.getElementById('delayed-element').style.display='none';}
+var progInterval=null,progVal=0;
+function startProgress(){if(progInterval)return;progVal=0;progInterval=setInterval(function(){progVal=Math.min(progVal+Math.random()*8,100);document.getElementById('lab-progress-bar').style.width=progVal+'%';document.getElementById('progress-pct').textContent=Math.round(progVal)+'%';if(progVal>=100){clearInterval(progInterval);progInterval=null;document.getElementById('progress-pct').textContent='✓ 100%';}},200);}
+function resetProgress(){clearInterval(progInterval);progInterval=null;progVal=0;document.getElementById('lab-progress-bar').style.width='0%';document.getElementById('progress-pct').textContent='0%';document.getElementById('ajax-status').textContent='Click "Fake AJAX Call"…';var sp=document.getElementById('ajax-spinner');if(sp)sp.remove();}
+function fakeAjax(){var area=document.getElementById('loading-area'),statusEl=document.getElementById('ajax-status');var old=document.getElementById('ajax-spinner');if(old)old.remove();var sp=document.createElement('span');sp.id='ajax-spinner';sp.className='lab-spinner';area.insertBefore(sp,statusEl);statusEl.textContent='Fetching data…';setTimeout(function(){if(sp.parentNode)sp.remove();statusEl.textContent='✓ Response: {"status":200,"data":"Run #'+Math.floor(Math.random()*9000+1000)+'"}';},2000);}
+function dragStart(e){e.dataTransfer.setData('text/plain',e.target.id);e.target.style.opacity='0.5';}
+function dropItem(e){e.preventDefault();this.classList.remove('drag-over');var id=e.dataTransfer.getData('text/plain');var el=document.getElementById(id);if(el){el.style.opacity='1';this.appendChild(el);}}
+function resetDrag(){var src=document.getElementById('drag-source');['drag-1','drag-2','drag-3'].forEach(function(id){var el=document.getElementById(id);if(el){el.style.opacity='1';src.appendChild(el);}});document.getElementById('drop-zone').innerHTML='';}
+document.addEventListener('dragend',function(e){if(e.target.classList.contains('lab-drag-item'))e.target.style.opacity='1';});
+function filterTable(){var q=document.getElementById('table-filter').value.toLowerCase();document.querySelectorAll('#table-body tr').forEach(function(row){row.style.display=row.textContent.toLowerCase().includes(q)?'':' none';});}
+var sortDir={};
+function sortTable(col){var tbody=document.getElementById('table-body');var rows=Array.from(tbody.querySelectorAll('tr'));var dir=sortDir[col]=!sortDir[col];rows.sort(function(a,b){var A=a.cells[col].textContent,B=b.cells[col].textContent;return dir?A.localeCompare(B,undefined,{numeric:true}):B.localeCompare(A,undefined,{numeric:true});});rows.forEach(function(r){tbody.appendChild(r);});}
+var counterVal=0;
+function changeCount(d){counterVal+=d;document.getElementById('counter-val').textContent=counterVal;}
+function fileSelected(input){var files=Array.from(input.files);if(!files.length){setResult('file-result','No file selected');return;}setResult('file-result','✓ '+files.length+' file(s): '+files.map(function(f){return f.name+' ('+(f.size/1024).toFixed(1)+' KB)';}).join(', '));}
+function handleFileDrop(e){e.preventDefault();document.getElementById('file-drop-zone').classList.remove('drag-over');setResult('file-result','✓ Dropped '+e.dataTransfer.files.length+' file(s): '+Array.from(e.dataTransfer.files).map(function(f){return f.name;}).join(', '));}
+function showNotif(icon,msg,color){var stack=document.getElementById('lab-notif-stack');var n=document.createElement('div');n.className='lab-notif';n.setAttribute('data-testid','lab-notification');n.style.borderLeft='3px solid '+color;n.innerHTML='<span style="font-size:1rem">'+icon+'</span><span>'+msg+'</span>';stack.appendChild(n);setTimeout(function(){n.classList.add('removing');setTimeout(function(){if(n.parentNode)n.parentNode.removeChild(n);},300);},3000);}
+function logKey(e){var parts=[];if(e.ctrlKey)parts.push('Ctrl');if(e.shiftKey)parts.push('Shift');if(e.altKey)parts.push('Alt');if(!['Control','Shift','Alt'].includes(e.key))parts.push(e.key===' '?'Space':e.key);setResult('key-result','keydown: "'+parts.join('+')+'" | code: '+e.code);if(e.key==='Escape'){e.target.value='';e.target.style.borderColor='';setResult('key-result','Escape — input cleared');}else{e.target.style.borderColor='var(--accent)';}}
 </script>
 </body>
 </html>

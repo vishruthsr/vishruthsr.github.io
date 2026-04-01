@@ -336,7 +336,7 @@ textarea{min-height:130px}
   <div class="hero-content">
     <div class="hero-tag"><span class="hero-tag-dot"></span>Open to New Opportunities</div>
     <h1 class="main-title">Vishruth<br><span class="accent-word">S R.</span></h1>
-    <p class="hero-role-wrap">I am a<span id="typed-role"></span><span id="typed-cursor"></span></p>
+    <p class="hero-role-wrap">I am a<span id="typed-role"> QA Test Engineer</span><span id="typed-cursor"></span></p>
     <p class="hero-sub">Building scalable QA frameworks that ship quality at speed. Specializing in Selenium, PyTest, REST API testing &amp; CI/CD integration.</p>
     <div class="hero-badges">
       <span class="badge">Selenium WebDriver</span>
@@ -548,7 +548,7 @@ textarea{min-height:130px}
   </div>
 </section>
 
-<footer><p>Designed &amp; built by Vishruth S R &mdash; <span id="year"></span> &middot; QA Automation Engineer &middot; Bengaluru</p></footer>
+<footer><p>Designed &amp; built by Vishruth S R &mdash; <span id="year">2026</span> &middot; QA Automation Engineer &middot; Bengaluru</p></footer>
 
 <div id="toast"><span class="t-icon" id="t-icon"></span><span id="t-msg"></span></div>
 
@@ -601,7 +601,10 @@ document.getElementById('year').textContent=new Date().getFullYear();
 
 var dotEl=document.getElementById('cur-dot');
 var ringEl=document.getElementById('cur-ring');
-var mx=0,my=0,rx=0,ry=0;
+var mx=innerWidth/2,my=innerHeight/2,rx=innerWidth/2,ry=innerHeight/2;
+/* init cursor at screen center so it's never off-screen on load */
+if(dotEl)dotEl.style.transform='translate(calc('+mx+'px - 50%), calc('+my+'px - 50%))';
+if(ringEl)ringEl.style.transform='translate(calc('+rx+'px - 50%), calc('+ry+'px - 50%))';
 document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;dotEl.style.transform='translate(calc('+mx+'px - 50%), calc('+my+'px - 50%))';},{passive:true});
 document.addEventListener('mousedown',function(){document.body.classList.add('cur-click');});
 document.addEventListener('mouseup',function(){document.body.classList.remove('cur-click');});
@@ -628,6 +631,8 @@ document.querySelectorAll('[data-tilt]').forEach(function(card){var cx2=0,cy2=0,
 
 var revIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0,rootMargin:'0px 0px -20px 0px'});
 document.querySelectorAll('.reveal').forEach(function(el){revIO.observe(el);});
+/* Fallback: after 1.2s force all reveal elements visible (GitHub Pages / slow loads) */
+setTimeout(function(){document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){el.classList.add('visible');});},1200);
 
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',scrollY>60);});
 
